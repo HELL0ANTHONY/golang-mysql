@@ -1,0 +1,15 @@
+{{define "form"}}
+{{template "header"}}
+  <div>
+    <form method="post" action="/insert">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Your name..">
+
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email" placeholder="Your email..">
+
+      <input type="submit" value="Create">
+    </form>
+  </div>
+{{template "footer"}}
+{{end}}

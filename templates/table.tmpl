@@ -1,0 +1,22 @@
+{{define "table"}}
+{{template "header" }}
+  <table>
+    <tr>
+      <th>Id</th>
+      <th>Employee</th>
+      <th>Email</th>
+    </tr>
+    {{ range. }}
+      <tr>
+        <td>{{ .Id }}</td>
+        <td>{{ .Name }}</td>
+        <td>{{ .Email }}</td>
+        <td>
+         <a name="" id="" href="/edit?id={{.Id}}">Edit</a> | 
+         <a name="" id="" href="/delete?id={{.Id}}">Delete</a>
+        </td>
+      </tr>
+    {{ end }}
+  </table>
+{{template "footer"}}
+{{end}}
